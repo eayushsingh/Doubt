@@ -1,0 +1,989 @@
+MMIP Important Formula Sheet
+1. Continuous-Time and Discrete-Time Signals
+Continuous-time:
+x(t)
+Discrete-time:
+x[n]
+Basic notation:
+n∈Z
+2. Basic Signal Operations
+Time Shifting
+Delay:
+x(t−t 
+0
+​	
+ )
+Advance:
+x(t+t 
+0
+​	
+ )
+Time Reversal
+x(−t)
+Time Scaling
+Compression:
+x(at),∣a∣>1
+Expansion:
+x(at),0<∣a∣<1
+Amplitude Scaling
+y(t)=Ax(t)
+3. General Signal Transformation
+Very important:
+y(t)=Ax(at+b)
+​	
+ 
+Rewrite:
+at+b=a(t+ 
+a
+b
+​	
+ )
+So the transformations are determined by:
+A → amplitude scaling
+a → time scaling/reversal
+b → time shift
+4. Signal Addition
+For two signals:
+y(t)=x 
+1
+​	
+ (t)+x 
+2
+​	
+ (t)
+​	
+ 
+For N signals:
+y(t)= 
+k=1
+∑
+N
+​	
+ x 
+k
+​	
+ (t)
+​	
+ 
+5. Signal Multiplication
+y(t)=x 
+1
+​	
+ (t)x 
+2
+​	
+ (t)
+​	
+ 
+For N signals:
+y(t)= 
+k=1
+∏
+N
+​	
+ x 
+k
+​	
+ (t)
+​	
+ 
+Session 4 specifically covers signal addition and multiplication.
+6. Fundamental Period
+For a periodic signal:
+x(t+T 
+0
+​	
+ )=x(t)
+​	
+ 
+Fundamental angular frequency:
+ω 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+2π
+​	
+ 
+​	
+ 
+Fundamental frequency:
+f 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ 
+​	
+ 
+Relation:
+ω 
+0
+​	
+ =2πf 
+0
+​	
+ 
+​	
+ 
+7. Trigonometric Fourier Series
+General form:
+x(t)=a 
+0
+​	
+ + 
+n=1
+∑
+∞
+​	
+ a 
+n
+​	
+ cos(nω 
+0
+​	
+ t)+ 
+n=1
+∑
+∞
+​	
+ b 
+n
+​	
+ sin(nω 
+0
+​	
+ t)
+​	
+ 
+Alternative:
+x(t)=a 
+0
+​	
+ + 
+n=1
+∑
+∞
+​	
+ [a 
+n
+​	
+ cos(nω 
+0
+​	
+ t)+b 
+n
+​	
+ sin(nω 
+0
+​	
+ t)]
+​	
+ 
+8. Fourier Coefficients
+DC coefficient
+a 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)dt
+​	
+ 
+Equivalent over symmetric interval:
+a 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ ∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ x(t)dt
+​	
+ 
+Cosine coefficient
+a 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+2
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)cos(nω 
+0
+​	
+ t)dt
+​	
+ 
+Sine coefficient
+b 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+2
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)sin(nω 
+0
+​	
+ t)dt
+​	
+ 
+9. Even and Odd Signal Shortcut
+Even signal
+x(−t)=x(t)
+Therefore:
+b 
+n
+​	
+ =0
+​	
+ 
+So:
+x(t)=a 
+0
+​	
+ + 
+n=1
+∑
+∞
+​	
+ a 
+n
+​	
+ cos(nω 
+0
+​	
+ t)
+​	
+ 
+Odd signal
+x(−t)=−x(t)
+Therefore:
+a 
+0
+​	
+ =0,a 
+n
+​	
+ =0
+​	
+ 
+So:
+x(t)= 
+n=1
+∑
+∞
+​	
+ b 
+n
+​	
+ sin(nω 
+0
+​	
+ t)
+​	
+ 
+10. Orthogonality Properties
+Session 5 explicitly includes orthogonality.
+For m
+
+=n:
+
+∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ cos(mω 
+0
+​	
+ t)cos(nω 
+0
+​	
+ t)dt=0
+​	
+ 
+For m=n:
+∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ cos 
+2
+ (nω 
+0
+​	
+ t)dt= 
+2
+T 
+0
+​	
+ 
+​	
+ 
+​	
+ 
+Similarly:
+∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ sin(mω 
+0
+​	
+ t)sin(nω 
+0
+​	
+ t)dt=0,m
+
+=n
+​	
+ 
+and
+∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ sin 
+2
+ (nω 
+0
+​	
+ t)dt= 
+2
+T 
+0
+​	
+ 
+​	
+ 
+​	
+ 
+Cross orthogonality:
+∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ sin(mω 
+0
+​	
+ t)cos(nω 
+0
+​	
+ t)dt=0
+​	
+ 
+11. Complex Fourier Series
+Session 6 focuses on CFS.
+General form:
+
+x(t)= 
+n=−∞
+∑
+∞
+​	
+ C 
+n
+​	
+ e 
+jnω 
+0
+​	
+ t
+ 
+​	
+ 
+Coefficient:
+C 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ ∫ 
+−T 
+0
+​	
+ /2
+T 
+0
+​	
+ /2
+​	
+ x(t)e 
+−jnω 
+0
+​	
+ t
+ dt
+​	
+ 
+12. Euler Relations
+Very important for CFS:
+e 
+jθ
+ =cosθ+jsinθ
+​	
+ 
+e 
+−jθ
+ =cosθ−jsinθ
+​	
+ 
+Therefore:
+cosθ= 
+2
+e 
+jθ
+ +e 
+−jθ
+ 
+​	
+ 
+​	
+ 
+sinθ= 
+2j
+e 
+jθ
+ −e 
+−jθ
+ 
+​	
+ 
+​	
+ 
+13. CFS ↔ TFS Relations
+a 
+0
+​	
+ =C 
+0
+​	
+ 
+​	
+ 
+For n>0:
+C 
+n
+​	
+ = 
+2
+a 
+n
+​	
+ −jb 
+n
+​	
+ 
+​	
+ 
+​	
+ 
+C 
+−n
+​	
+ = 
+2
+a 
+n
+​	
+ +jb 
+n
+​	
+ 
+​	
+ 
+​	
+ 
+Hence:
+a 
+n
+​	
+ =C 
+n
+​	
+ +C 
+−n
+​	
+ 
+​	
+ 
+b 
+n
+​	
+ =j(C 
+n
+​	
+ −C 
+−n
+​	
+ )
+​	
+ 
+14. Fourier Transform
+Session 7 includes Fourier Transform.
+Forward Fourier Transform:
+
+X(ω)=∫ 
+−∞
+∞
+​	
+ x(t)e 
+−jωt
+ dt
+​	
+ 
+Inverse Fourier Transform:
+x(t)= 
+2π
+1
+​	
+ ∫ 
+−∞
+∞
+​	
+ X(ω)e 
+jωt
+ dω
+​	
+ 
+15. Relationship Between CFS and FT
+As:
+T 
+0
+​	
+ →∞
+then:
+ω 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+2π
+​	
+ →0
+​	
+ 
+and discrete harmonics become continuous.
+This leads to the Fourier Transform representation.
+
+16. Rectangular Pulse
+For
+x(t)=A,∣t∣≤ 
+2
+τ
+​	
+ 
+and
+x(t)=0,∣t∣> 
+2
+τ
+​	
+ 
+Fourier transform:
+X(ω)=A∫ 
+−τ/2
+τ/2
+​	
+ e 
+−jωt
+ dt
+After integration:
+X(ω)=AτSa( 
+2
+ωτ
+​	
+ )
+​	
+ 
+where:
+Sa(x)= 
+x
+sinx
+​	
+ 
+​	
+ 
+17. Sampling/Sinc Function
+Sa(x)= 
+x
+sinx
+​	
+ 
+​	
+ 
+At x=0:
+Sa(0)=1
+​	
+ 
+because:
+x→0
+lim
+​	
+  
+x
+sinx
+​	
+ =1
+First zeros:
+x=±π,±2π,±3π,…
+​	
+ 
+First zero:
+x=±π
+​	
+ 
+18. CFS of a Rectangular Pulse
+For a periodic rectangular pulse:
+C 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+Aτ
+​	
+ Sa( 
+T 
+0
+​	
+ 
+nπτ
+​	
+ )
+​	
+ 
+This is one of the important results connecting CFS with the sinc function.
+19. First Spectral Null
+From:
+2
+ωτ
+​	
+ =π
+we get:
+ω= 
+τ
+2π
+​	
+ 
+​	
+ 
+So the first null-to-null width is:
+Δω= 
+τ
+4π
+​	
+ 
+​	
+ 
+20. Important Exponential Identities
+e 
+jωt
+ e 
+jω 
+0
+​	
+ t
+ =e 
+j(ω+ω 
+0
+​	
+ )t
+ 
+​	
+ 
+e 
+jωt
+ e 
+−jω 
+0
+​	
+ t
+ =e 
+j(ω−ω 
+0
+​	
+ )t
+ 
+​	
+ 
+(e 
+jωt
+ ) 
+∗
+ =e 
+−jωt
+ 
+​	
+ 
+Must-Memorize Formula Set
+For your MMIP sessions, the highest-priority formulas are:
+ω 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+2π
+​	
+ 
+​	
+ 
+x(t)=a 
+0
+​	
+ + 
+n=1
+∑
+∞
+​	
+ [a 
+n
+​	
+ cos(nω 
+0
+​	
+ t)+b 
+n
+​	
+ sin(nω 
+0
+​	
+ t)]
+​	
+ 
+a 
+0
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)dt
+​	
+ 
+a 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+2
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)cos(nω 
+0
+​	
+ t)dt
+​	
+ 
+b 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+2
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)sin(nω 
+0
+​	
+ t)dt
+​	
+ 
+x(t)= 
+n=−∞
+∑
+∞
+​	
+ C 
+n
+​	
+ e 
+jnω 
+0
+​	
+ t
+ 
+​	
+ 
+C 
+n
+​	
+ = 
+T 
+0
+​	
+ 
+1
+​	
+ ∫ 
+T 
+0
+​	
+ 
+​	
+ x(t)e 
+−jnω 
+0
+​	
+ t
+ dt
+​	
+ 
+X(ω)=∫ 
+−∞
+∞
+​	
+ x(t)e 
+−jωt
+ dt
+​	
+ 
+x(t)= 
+2π
+1
+​	
+ ∫ 
+−∞
+∞
+​	
+ X(ω)e 
+jωt
+ dω
+​	
+ 
+Sa(x)= 
+x
+sinx
+​	
+ 
+​	
+ 
+X 
+rect
+​	
+ (ω)=AτSa( 
+2
+ωτ
+​	
+ )
+​	
+ 
+These are the formulas most worth memorizing first from the Session 3–7 material.
